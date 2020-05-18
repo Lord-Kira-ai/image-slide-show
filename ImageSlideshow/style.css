@@ -1,0 +1,94 @@
+
+#backgound {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    position: relative;
+    /* background-color: rgb(255, 0, 255); */
+    background-color: black;
+    z-index: -1;
+}
+#backgound::after {
+    content: "";
+    background: url(images/dribble.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 1;   
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+}
+
+#content {
+    z-index: 2;
+    /* color: red; */
+    position: absolute;
+    height: 30rem;
+    width: 50rem;
+    background-color: white;
+    bottom: 20%;
+    left: 25%;
+    background: url(images/I11.jpg)no-repeat center/cover;
+    border-radius: 20px;
+    transition: 500ms;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#content:hover{
+   box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.5);
+   transform: scale(1.1);
+}
+
+
+/* TODO: here I will choose svg through type selector because for practice  */
+svg[id="left"] {
+    font-size: 4rem;
+    /* outline: none; */
+    color: rgb(255, 0, 217);
+    margin: 0 20px;
+    /* transition: 1s ease-in; */
+}
+svg[id="left"]:active {
+   color: white;
+   transform: translateX(-10px);
+   /* color: #ff00ff; */
+}
+
+
+
+#right {
+    font-size: 4rem;
+    /* outline: none; */
+    color: rgb(255, 0, 217);
+    margin: 0 20px;
+}
+#right:active {
+   /* color: white; */
+   transform: translateX(10px);
+}
+
+#targets {
+    /* border: 1px solid red; */
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    transform: translate(-50%,-50%);
+}
+
+.points {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 9999px;
+    border: 2px solid black;
+    background-color: white;
+    padding:0 4px;
+}
